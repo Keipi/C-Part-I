@@ -1,0 +1,8 @@
+#Used for compilation and linking
+g++ -Wall ---std=c++2a hello.cc -o hello
+
+#Used for compiling only
+g++ -Wall ---std=c++2a hello.cc -c
+
+#Used for compilation and linking with switch command
+g++ -Wall --std=c++2a hello.cc -s -o hello
