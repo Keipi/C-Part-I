@@ -1,0 +1,7 @@
+#include <iostream>
+#include <cstring>
+#include "sum1.cc"                      // 1
+#include "sum2.cc"                      // 2
+
+int sum(int argc, char *argv[]);        // Fun to sum ints
+double sum(int argc, char *argv[], double isDbl); // Fun to sum dbls

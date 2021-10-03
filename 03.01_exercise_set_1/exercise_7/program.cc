@@ -1,31 +1,30 @@
 #include <iostream>
 
-struct Val                                                  // Struct with bit fields in order
+struct Val                             // Bit field with default values 
 {
-	size_t b0: 1,
-		   b1: 3,
-		   b2: 4,
-		   b3: 5,
-		   b4: 4,
-		   b5: 4,
-		   b6: 4,
-		   b7: 4,
-		   b8: 4,
-		   b9: 5,
-		   b10: 2;
+	size_t b0: 1 = 0,
+		   b1: 3 = 7,
+		   b2: 4 = 15,
+		   b3: 5 = 10,
+		   b4: 4 = 6,
+		   b5: 4 = 7,
+		   b6: 4 = 15,
+		   b7: 4 = 15,
+		   b8: 4 = 7,
+		   b9: 5 = 0,
+		   b10: 2 = 3;
 };
                                                              
-union Data                                                  // Union with bit representation and 
-{                                                           // integer representation
+union Data                             // union with value and bit field 
+{                                                           
 	size_t value;
-	Val bit_rep;
+	Val bitRep{};
 };
 
 int main()
 {
-	Data int_rep;
-	int_rep.bit_rep = {0, 7, 15, 10, 6, 7, 15, 15, 7, 0, 3};// Values in order of definition
+    Data intRep;                       // Init with default values
 
-	std::cout << std::hex << int_rep.value;                 // Use hex to print hex representation
-	                                                        // of int representation
+	                                   // Print int representation as hex
+	std::cout << std::hex << intRep.value;                 
 }
