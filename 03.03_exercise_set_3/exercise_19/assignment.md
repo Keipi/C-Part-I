@@ -1,0 +1,11 @@
+Purpose of this exercise: learn to design and implement a program, using functions.
+The program wc (word count) is a well known unix program. Here we'll develop our own wc program. Wc expects one argument: it's either
+
+-c if you want to determine the number of characters in the input stream;
+-w if you want to determine the number of words (i.e., white-space delimited groups of characters) characters in the input stream;
+-l if you want to determine the number of lines in the input stream.
+Input is read from the standard input stream, and the result is written to the standard output stream. All defined functions should be declared in main.ih, which is the program's internal header file (cf. Annotations near the end of section 7.11). In short:
+
+No include guards are required;
+All functions called by main (either directly or indirectly) are declared in the internal header file;
+All source files include this internal header.

@@ -1,0 +1,7 @@
+#include <iostream>
+#include <string>
+#include <ctype.h>
+#include "readLines.cc"
+#include "countLines.cc"
+#include "countChars.cc"
+#include "countWords.cc"
