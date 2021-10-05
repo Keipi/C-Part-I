@@ -1,5 +1,12 @@
 #include <iostream>
+#include "usage.cc"
+#include "combine.cc"
+#include "structCall.cc"
+#include "boundCall.cc"
 
+void usage(std::string const &programName = "combine");
+struct ReturnValues combine(int argc, char *argv[]);
 struct ReturnValues;
+void ReturnValues::assignValues(int argc, char *argv[]);
 bool structCall(int argc, char *argv[]);
 void boundCall(int argc, char *argv[]);

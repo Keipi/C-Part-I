@@ -5,3 +5,8 @@
 #include "countLines.cc"
 #include "countChars.cc"
 #include "countWords.cc"
+
+void countChars(std::string input);     // count chrs in input
+void countLines(std::string input);     // count lines in input
+void countWords(std::string input);     // count words in input
+std::string readLines();                // fun to read input
