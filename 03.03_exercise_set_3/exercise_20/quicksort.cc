@@ -1,7 +1,12 @@
-std::string* quicksort(size_t nrOfElements, std::string stringArray[])
-{
-  for (size_t idx = 0; idx != nrOfElements; ++idx)
-    std::cout << stringArray[idx] << '\n';
+#include "partition.cc"
 
-  return stringArray;
+std::string* quicksort(std::string stringArr[], size_t left, size_t right)
+{
+  if (left < right)
+    {
+    size_t pivot = partition(stringArr, left, right); // partition array
+
+    quicksort(stringArr, pivot + 1, right);
+    quicksort(stringArr, left, pivot - 1);
+    }
 }

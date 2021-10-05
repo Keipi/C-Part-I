@@ -9,7 +9,7 @@ int main()
   std::string variables[nVariables];    // Initialize string array
 
                                         // Assign each environ *char
-										// to array of string
+                                        // to array of string
   for (size_t idx = 0; idx != nVariables; ++idx)
     variables[idx] = environ[idx];
 
